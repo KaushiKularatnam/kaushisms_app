@@ -1,0 +1,19 @@
+
+
+<div align="left">
+  
+  <h1>Unsubscribe</h1>
+  <% if params[:phone] %>
+  <div style="color:red;">Phone number <%= params[:phone] %> was not found in the database</div>
+  <% end %>
+	<%= form_tag :action => "deletesubscriber" do %>
+		<div class="field">
+			<%= label_tag(:p, "Phone:") %>
+			<%= phone_field_tag(:phone) %>
+		</div>
+		<div class="actions">
+			<%= submit_tag("Unsubscribe") %>
+		</div>
+	<% end %>
+  
+</div>

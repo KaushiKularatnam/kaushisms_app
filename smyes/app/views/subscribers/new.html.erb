@@ -1,0 +1,11 @@
+<div>
+
+  <h1>New subscriber</h1>
+
+ <% if flash[:alert] %>
+    <p id="notice"><%= flash[:alert] %></p>
+  <% end %>
+
+  <%= render 'form' %>
+
+</div>
